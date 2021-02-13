@@ -13,11 +13,19 @@ from flask import render_template, request, redirect, url_for, flash
 # Routing for your application.
 ###
 
+@app.route('/profile')
+def profile():
+    return render_template('profile.html', x = format_date_joined())
+    
 @app.route('/')
 def home():
     """Render website's home page."""
     return render_template('home.html')
 
+import datetime
+def format_date_joined():
+    now = datetime.datetime.now()
+    return ("Joined " + now.strftime("%B, %Y"))
 
 @app.route('/about/')
 def about():

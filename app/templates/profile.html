@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>My Profile</title>
+ <link rel="stylesheet" type= "text/css" href= "{{url_for('static', filename= 'css/app.css')}}">
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block main %}
+    <div class = "wrapper">
+        <div class = "top">
+            <img src="{{url_for('static', filename='image.jpg')}}"/>
+            <h1 class = "name">Mary Jane</h1>
+            <h2 class = "email">@mjane</h2>
+            <h2>Kingston, Jamaica</h2>
+            <h2>{{ x }}</h2>
+        </div>
+        <div class = "bottom">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, aperiam? Mollitia libero eos culpa eveniet blanditiis, ducimus similique dolor quam. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate est sequi, pariatur suscipit laudantium odio itaque sit tempora aperiam. Soluta rem iusto nam maxime itaque laborum sit pariatur mollitia rerum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo exercitationem nobis ad tenetur aliquam quisquam..</p>
+            <li class = "num">7<p>Post</p></li>
+            <li class = "num">100<p>Following</p></li>
+            <li class = "num">250<p>Followers</p></li>
+            <p><button id = "btn">Follow</button></p>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
