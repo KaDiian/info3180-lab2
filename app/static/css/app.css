@@ -1,15 +1,17 @@
 body {
-    padding-top: 3rem;
+    padding-top: 2rem;
     background-color: black;
-    display: flex;
+    display: grid;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 .wrapper{  
+    margin-top: 25px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: (1fr, 1fr, 1fr);
-    border-radius: 5px;
+    grid-template-rows: repeat(2, 1fr);
+    
 }
 img{
     padding-top: 20px;
@@ -19,19 +21,25 @@ img{
 }
 .top{
     grid-area: 1 / 1 / 2 / 2;
+    height: 40vh;
     text-align: center;
     background: rgb(71,25,157);
     background: linear-gradient(90deg, rgba(71,25,157,0.9763912310286678) 0%, rgba(9,82,121,0.8111298482293423) 35%, rgba(0,212,255,1) 100%);
-    
+}
+.top p{
+    letter-spacing: 0.1em;
+    line-height: 20%;
 }
 h2{
     font-weight: normal;
 }
 .bottom{
     grid-area: 2 / 1 / 3 / 2;
-    
+    padding-left: 40px;
+    padding-right: 40px;
     text-align: center;
     background-color: rgb(240, 197, 197);
+    height: 40vh;
 }
 .num{
     display: inline-block;

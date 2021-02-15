@@ -30,7 +30,7 @@ def format_date_joined():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Kadian Davidson")
 
 
 ###
